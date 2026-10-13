@@ -24,7 +24,7 @@ async function verInfo(id) {
         {{ element.Title }}
       </v-card-title>
 
-      <v-img :src="element.Poster" alt=""  height="250" cover class="rounded-lg my-3"></v-img>
+      <v-img :src="element.Poster" alt=""  max-height="250" cover class="rounded-lg my-3"></v-img>
       
       <v-card-subtitle >
         <v-icon icon="mdi-calendar" size="small" class="mr-1"></v-icon>
@@ -46,7 +46,7 @@ async function verInfo(id) {
 
           <template v-slot:default="{ isActive }">
               <v-card v-if="peli">
-                  <v-card-title class="text-h5 font-weight-bold pt-2 px-2 text-wrap">
+                  <v-card-title class="text-h5 font-weight-bold pt-2 px-2 ">
                       {{ peli.Title }}
                   </v-card-title>
 
