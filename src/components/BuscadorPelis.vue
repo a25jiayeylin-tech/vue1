@@ -8,9 +8,13 @@ const resultats = ref([])
 
 const cercaFeta = ref(false) 
 
+
 async function ferCerca() {
+    if (!cerca.value.trim()) return
+    cercaFeta.value = false
+    resultats.value = await buscar(cerca.value) || []
     cercaFeta.value = true
-    resultats.value = await buscar(cerca.value) 
+    
     
 }
 
